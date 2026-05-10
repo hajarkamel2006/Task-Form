@@ -1,0 +1,124 @@
+  body {
+      background-color: #3b3a3a;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      color: white;
+  }
+
+  .form-card {
+      background-color: #a99999;
+      padding: 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 550px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .input-group {
+      margin-bottom: 15px;
+  }
+
+  label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+  }
+
+  input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      outline: none;
+      box-sizing: border-box;
+      font-size: 14px;
+      transition: 0.3s;
+  }
+
+  /* نظام إخفاء وإظهار القوائم */
+  .rules-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 10px;
+      font-size: 12.5px;
+      display: none;
+      /* مخفي افتراضياً */
+  }
+
+  input:focus+.rules-list {
+      display: block;
+  }
+
+  .rules-list li {
+      color: #ff6b6b;
+      margin-bottom: 5px;
+      transition: 0.3s;
+  }
+
+  .rules-list li.valid {
+      color: #2ecc71;
+  }
+
+  .row {
+      display: flex;
+      gap: 15px;
+  }
+
+  .half {
+      flex: 1;
+  }
+
+  button#submitBtn {
+      width: 100%;
+      padding: 13px;
+      background-color: #707177;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+
+  hr {
+      border: 0.5px solid #555;
+      margin: 25px 0;
+  }
+
+  /* Quotes UI */
+  .quote-container {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+  }
+
+  .quote-actions {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  .btn-gen {
+      background: #8eab8e;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .btn-copy {
+      background: #87a7b1;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+  }

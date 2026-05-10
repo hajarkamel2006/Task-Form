@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Validation Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="form-card">
+        <form id="registrationForm">
+            <div class="input-group">
+                <label>First name:</label>
+                <input type="text" id="firstName" placeholder="Enter your Firstname" autocomplete="off">
+                <ul class="rules-list" id="fnRules">
+                    <li id="fn-cap"><i class="fas fa-circle-xmark"></i> First name must start with capital letter</li>
+                    <li id="fn-letters"><i class="fas fa-circle-xmark"></i> Only Letters</li>
+                    <li id="fn-space"><i class="fas fa-circle-xmark"></i> Have No Space</li>
+                    <li id="fn-length"><i class="fas fa-circle-xmark"></i> More than 2 Letters</li>
+                </ul>
+            </div>
+
+            <div class="input-group">
+                <label>Last name:</label>
+                <input type="text" id="lastName" placeholder="Enter your Lastname" autocomplete="off">
+                <ul class="rules-list" id="lnRules">
+                    <li id="ln-cap"><i class="fas fa-circle-xmark"></i> lastname must start with capital</li>
+                    <li id="ln-letters"><i class="fas fa-circle-xmark"></i> only letters</li>
+                </ul>
+            </div>
+
+            <div class="input-group">
+                <label>Phone number:</label>
+                <input type="tel" id="phone" placeholder="Enter your Phone">
+                <ul class="rules-list" id="phoneRules">
+                    <li id="ph-start"><i class="fas fa-circle-xmark"></i> must start with 010, 011, 012 or 015</li>
+                    <li id="ph-length"><i class="fas fa-circle-xmark"></i> exactly 11 numbers</li>
+                </ul>
+            </div>
+
+            <div class="input-group">
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="Enter your Email">
+                <ul class="rules-list" id="emailRules">
+                    <li id="em-valid"><i class="fas fa-circle-xmark"></i> valid email address format</li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="input-group half">
+                    <label>Password:</label>
+                    <input type="password" id="password" placeholder="Enter Password">
+                    <ul class="rules-list" id="passRules">
+                        <li id="pw-num"><i class="fas fa-circle-xmark"></i> at least one number</li>
+                        <li id="pw-len"><i class="fas fa-circle-xmark"></i> min 8 characters</li>
+                    </ul>
+                </div>
+                <div class="input-group half">
+                    <label>Confirm password:</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                    <ul class="rules-list" id="confirmRules">
+                        <li id="cp-match"><i class="fas fa-circle-xmark"></i> Passwords Must Match</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+
+        <hr>
+
+        <div class="quote-container">
+            <p id="quoteBox">"Keep pushing forward!"</p>
+            <div class="quote-actions">
+                <button onclick="getNewQuote()" class="btn-gen">New Quote</button>
+                <button onclick="copyToClipboard()" class="btn-copy"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
